@@ -304,85 +304,113 @@ const translations = {
     ft_left: "© 2025 Cồ Văn An. All rights reserved.",
     ft_right: "Built with <span style=\"color:var(--accent)\">♥</span> from Space"
   },
-  vi: {
-    nav_about: "Giới thiệu",
-    nav_projects: "Dự án",
-    nav_gallery: "Thư viện",
-    nav_experience: "Kinh nghiệm",
-    nav_contact: "Liên hệ",
-    nav_hire: "Thuê Tôi",
-    mobile_hire: "Thuê Tôi →",
-    hero_role1: "Lập trình viên Full Stack",
-    hero_role2: "& Thiết kế UX-UI",
-    hero_desc: "Xây dựng trải nghiệm số<br>giao thoa giữa<br><strong style=\"color:var(--charcoal)\">lập trình, nghệ thuật &amp; sáng tạo.</strong>",
-    hero_available: "Sẵn sàng nhận dự án tự do",
-    hero_scroll: "Cuộn",
-    about_label: "Về Tôi",
-    about_title: "Kiến tạo<br><em>thế giới số</em><br>tuyệt đẹp",
-    about_text: "Tôi là Cồ Văn An — một lập trình viên full-stack đến từ Việt Nam với niềm đam mê về kiến trúc sạch và giao diện biểu cảm. Tôi xây dựng những thứ mọi người nhớ đến, không chỉ sử dụng. Mỗi pixel, mỗi lệnh gọi API, mỗi truy vấn CSDL đều là cơ hội để làm nên điều phi thường.",
-    stat_years: "Năm Kinh Nghiệm",
-    stat_projects: "Dự Án Hoàn Thành",
-    stat_clients: "Khách Hàng Hài Lòng",
-    stat_tech: "Công Nghệ",
-    skill_front: "Giao diện (Frontend)",
-    skill_back: "Hệ thống (Backend)",
-    skill_infra: "Cơ sở hạ tầng",
-    skill_tools: "Công cụ &amp; Thiết kế",
-    proj_label: "Sản Phẩm Nổi Bật",
-    proj_title: "Dự án<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">&amp; Tình huống</span>",
-    proj_count: "06 Dự án",
-    proj_desc1: "Nền tảng thương mại điện tử full-stack với AI gợi ý",
-    proj_desc2: "Bảng phân tích thời gian thực với dữ liệu WebSocket trực tiếp",
-    proj_desc3: "Bộ công cụ sáng tạo nghệ thuật sinh ra trên trình duyệt",
-    proj_desc4: "Nền tảng AI hội thoại với định tuyến đa mô hình",
-    proj_desc5: "Mạng xã hội chia sẻ mã nguồn dành cho lập trình viên",
-    proj_desc6: "Lưu trữ tệp phi tập trung xác minh bằng blockchain",
-    proj_view: "Xem",
-    gal_label: "Thư viện Ảnh",
-    gal_title: "Tác phẩm<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">Thiết kế</span>",
-    gal_desc: "Bộ sưu tập chọn lọc các giao diện, hệ thống thiết kế và các thử nghiệm hình ảnh vượt qua giới hạn của những gì có thể trên trình duyệt.",
-    filter_all: "Tất cả",
-    filter_ui: "Thiết kế UI",
-    filter_web: "Phát triển Web",
-    filter_motion: "Chuyển động",
-    filter_brand: "Thương hiệu",
-    exp_label: "Kinh nghiệm &amp; Giải thưởng",
-    exp_role1: "Lập trình viên Frontend Cao cấp",
-    exp_comp1: "Tech Startup — Từ xa",
-    exp_desc1: "Dẫn dắt kiến trúc frontend cho nền tảng SaaS phục vụ hơn 50 nghìn người dùng. Xây dựng hệ thống component, giảm 40% dung lượng.",
-    exp_role2: "Lập trình viên Full Stack",
-    exp_comp2: "Digital Agency, Hà Nội",
-    exp_desc2: "Phát triển hơn 12 dự án khách hàng đa lĩnh vực (e-commerce, fintech, truyền thông). Hoàn thành đúng hạn với tỷ lệ giữ chân khách 100%.",
-    exp_role3: "Lập trình viên Web Tập sự",
-    exp_comp3: "Làm tự do",
-    exp_desc3: "Xây dựng ứng dụng web đáp ứng cho doanh nghiệp địa phương. Thiết lập quan hệ dẫn đến 8 hợp đồng dài hạn.",
-    exp_role4: "Thực tập sinh UI/UX",
-    exp_comp4: "Design Studio, Đà Nẵng",
-    exp_desc4: "Thiết kế wireframe và prototype trên Figma. Đóng góp vào hệ thống thiết kế được dùng trên 20+ sản phẩm.",
-    exp_big: "Kiến tạo những điều<br><em>có ý nghĩa.</em>",
-    aw_label: "Giải Thưởng",
-    gh_label: "Mã Nguồn Mở",
-    gh_title: "Mã nguồn tôi<br>đã mang đến <em>thế giới.</em>",
-    gh_desc: "Mỗi dòng lệnh là một câu chuyện. Mỗi dự án là một cuộc trò chuyện. Tôi tin vào việc xây dựng công khai và đóng góp lại cho cộng đồng.",
-    gh_btn: "Xem Hồ sơ GitHub",
-    gh_repo: "Kho lưu trữ",
-    gh_star: "Lượt thích (Stars)",
-    gh_follow: "Người theo dõi",
-    gh_contrib: "Đóng góp",
-    gh_act: "Hoạt động đóng góp — 2024",
-    ct_label: "Liên hệ",
-    ct_big: "Cùng nhau<br><em>phát triển.</em>",
-    ct_sub: "Dù bạn có ý tưởng dự án, muốn hợp tác hay chỉ đơn giản là muốn trò chuyện — tôi luôn sẵn sàng lắng nghe.",
-    ct_form_lbl: "Gửi tin nhắn",
-    ct_name: "Tên của bạn",
-    ct_email: "Địa chỉ Email",
-    ct_subj: "Chủ đề",
-    ct_msg: "Nội dung",
-    ct_btn: "<span>Gửi tin nhắn →</span>",
-    ct_success: "✓ Đã gửi tin nhắn! Tôi sẽ phản hồi sớm.",
-    ft_left: "© 2025 Cồ Văn An. Bảo lưu mọi quyền.",
-    ft_right: "Xây dựng với <span style=\"color:var(--accent)\">♥</span> từ Trái Đất"
-  }
+ vi: {
+  nav_about: "Giới thiệu",
+  nav_projects: "Dự án",
+  nav_gallery: "Thư viện",
+  nav_experience: "Kinh nghiệm",
+  nav_contact: "Liên hệ",
+  nav_hire: "Thuê tôi",
+  mobile_hire: "Thuê tôi →",
+
+  hero_role1: "Lập trình viên Full Stack",
+  hero_role2: "& Nhà thiết kế UX/UI",
+
+  hero_desc: "Xây dựng những trải nghiệm số<br>nơi giao thoa giữa<br><strong style=\"color:var(--charcoal)\">công nghệ, thẩm mỹ &amp; sáng tạo.</strong>",
+
+  hero_available: "Sẵn sàng nhận dự án freelance",
+  hero_scroll: "Cuộn xuống",
+
+  about_label: "Về tôi",
+  about_title: "Kiến tạo<br><em>trải nghiệm số</em><br>ấn tượng",
+
+  about_text: "Tôi là Cồ Văn An — một lập trình viên full-stack đến từ Việt Nam, đam mê kiến trúc hệ thống sạch và giao diện giàu cảm xúc. Tôi không chỉ xây dựng sản phẩm để sử dụng, mà còn để tạo dấu ấn. Mỗi pixel, mỗi API, mỗi truy vấn cơ sở dữ liệu đều là cơ hội để làm nên điều khác biệt.",
+
+  stat_years: "Năm kinh nghiệm",
+  stat_projects: "Dự án hoàn thành",
+  stat_clients: "Khách hàng hài lòng",
+  stat_tech: "Công nghệ",
+
+  skill_front: "Frontend",
+  skill_back: "Backend",
+  skill_infra: "Hạ tầng",
+  skill_tools: "Công cụ & Thiết kế",
+
+  proj_label: "Dự án tiêu biểu",
+  proj_title: "Dự án<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">&amp; Nghiên cứu</span>",
+  proj_count: "06 dự án",
+
+  proj_desc1: "Nền tảng thương mại điện tử full-stack tích hợp AI gợi ý",
+  proj_desc2: "Dashboard phân tích dữ liệu thời gian thực với WebSocket",
+  proj_desc3: "Công cụ sáng tạo nghệ thuật sinh (generative art) trên trình duyệt",
+  proj_desc4: "Nền tảng AI hội thoại với khả năng định tuyến đa mô hình",
+  proj_desc5: "Mạng xã hội dành cho lập trình viên chia sẻ mã nguồn",
+  proj_desc6: "Hệ thống lưu trữ file phi tập trung với xác thực blockchain",
+
+  proj_view: "Xem",
+
+  gal_label: "Thư viện",
+  gal_title: "Thiết kế<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">Works</span>",
+
+  gal_desc: "Tổng hợp các thiết kế UI, hệ thống design và thử nghiệm hình ảnh nhằm mở rộng giới hạn trải nghiệm trên nền web.",
+
+  filter_all: "Tất cả",
+  filter_ui: "UI Design",
+  filter_web: "Web Dev",
+  filter_motion: "Motion",
+  filter_brand: "Branding",
+
+  exp_label: "Kinh nghiệm & Thành tựu",
+
+  exp_role1: "Senior Frontend Developer",
+  exp_comp1: "Startup công nghệ — Remote",
+  exp_desc1: "Dẫn dắt kiến trúc frontend cho nền tảng SaaS phục vụ hơn 50.000 người dùng. Xây dựng hệ thống component và giảm 40% dung lượng bundle.",
+
+  exp_role2: "Full Stack Developer",
+  exp_comp2: "Digital Agency, Hà Nội",
+  exp_desc2: "Phát triển hơn 12 dự án khách hàng trong các lĩnh vực e-commerce, fintech và media. Đảm bảo tiến độ gấp với tỷ lệ giữ chân khách hàng 100%.",
+
+  exp_role3: "Junior Web Developer",
+  exp_comp3: "Freelance",
+  exp_desc3: "Xây dựng các ứng dụng web responsive cho doanh nghiệp nhỏ. Tạo dựng mối quan hệ khách hàng lâu dài với 8 hợp đồng dài hạn.",
+
+  exp_role4: "UI/UX Intern",
+  exp_comp4: "Design Studio, Đà Nẵng",
+  exp_desc4: "Thiết kế wireframe và prototype bằng Figma. Đóng góp vào hệ thống design được sử dụng trong hơn 20 sản phẩm.",
+
+  exp_big: "Xây dựng những sản phẩm<br><em>có giá trị.</em>",
+
+  aw_label: "Thành tựu",
+
+  gh_label: "Mã nguồn mở",
+  gh_title: "Những gì tôi<br>đã chia sẻ với <em>cộng đồng.</em>",
+
+  gh_desc: "Mỗi dòng code đều kể một câu chuyện. Mỗi repository là một cuộc đối thoại. Tôi tin vào việc xây dựng công khai và đóng góp trở lại cho cộng đồng.",
+
+  gh_btn: "Xem GitHub",
+  gh_repo: "Repositories",
+  gh_star: "Stars",
+  gh_follow: "Followers",
+  gh_contrib: "Đóng góp",
+  gh_act: "Hoạt động đóng góp — 2024",
+
+  ct_label: "Liên hệ",
+  ct_big: "Cùng nhau<br><em>xây dựng</em><br>điều gì đó tuyệt vời.",
+
+  ct_sub: "Nếu bạn có ý tưởng, muốn hợp tác, hoặc đơn giản chỉ muốn trò chuyện — mình luôn sẵn sàng.",
+
+  ct_form_lbl: "Gửi tin nhắn",
+  ct_name: "Tên của bạn",
+  ct_email: "Email",
+  ct_subj: "Chủ đề",
+  ct_msg: "Nội dung",
+
+  ct_btn: "<span>Gửi tin nhắn →</span>",
+  ct_success: "✓ Đã gửi! Mình sẽ phản hồi sớm.",
+
+  ft_left: "© 2025 Cồ Văn An. All rights reserved.",
+  ft_right: "Built with <span style=\"color:var(--accent)\">♥</span> from Earth"
+}
 };
 
 let currentLang = 'en';
