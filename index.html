@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
     rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -21,7 +21,7 @@
 
   <!-- LOADER -->
   <div id="loader">
-    <div class="loader-name" id="loader-name">Dharun Kumar<span style="color:var(--accent)">.</span></div>
+    <div class="loader-name" id="loader-name">Cồ Văn An<span style="color:var(--accent)">.</span></div>
     <div class="loader-bar-wrap">
       <div class="loader-bar" id="loader-bar"></div>
     </div>
@@ -42,15 +42,21 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">dk<span>.</span>dev</a>
+    <div class="lang-toggle" id="langToggle"
+      style="cursor:pointer; font-family:var(--font-mono); font-size:12px; font-weight:bold; color:var(--charcoal); display:flex; gap:5px;">
+      <span id="lang-en" class="active" style="color:var(--accent);">EN</span>
+      <span>/</span>
+      <span id="lang-vi" style="color:var(--muted);">VI</span>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+      <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
-    <a href="mailto:dharunkumar@email.com" class="nav-cta">Hire Me</a>
+
+    <a href="mailto:covanan632003@gmail.com" class="nav-cta" data-i18n="nav_hire">Hire Me</a>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
@@ -58,12 +64,12 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
-    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    <a href="mailto:dharunkumar@email.com">Hire Me →</a>
+    <a href="#about" onclick="closeMobileMenu()" data-i18n="nav_about">About</a>
+    <a href="#projects" onclick="closeMobileMenu()" data-i18n="nav_projects">Projects</a>
+    <a href="#gallery" onclick="closeMobileMenu()" data-i18n="nav_gallery">Gallery</a>
+    <a href="#experience" onclick="closeMobileMenu()" data-i18n="nav_experience">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">Contact</a>
+    <a href="mailto:dharunkumar@email.com" data-i18n="mobile_hire">Hire Me →</a>
   </div>
 
   <!-- HERO -->
@@ -72,31 +78,31 @@
     <div class="hero-number" aria-hidden="true">01</div>
 
     <div class="hero-index reveal">
-      <span>Full Stack Developer</span>
-      <span>&amp; Creative Technologist</span>
+      <span data-i18n="hero_role1">Full Stack Developer</span>
+      <span data-i18n="hero_role2">&amp; UX-UI Designer</span>
     </div>
 
     <h1 class="hero-title">
-      <div class="overflow-hidden"><span class="title-line block">Dharun</span></div>
-      <div class="overflow-hidden"><span class="title-line block"><em class="serif-word">Kumar</em></span></div>
-      <div class="overflow-hidden"><span class="title-line block outline-text">N.</span></div>
+      <div class="overflow-hidden"><span class="title-line block">An</span></div>
+      <div class="overflow-hidden"><span class="title-line block"><em class="serif-word">Cồ</em></span></div>
+      <div class="overflow-hidden"><span class="title-line block outline-text">Văn</span></div>
     </h1>
 
     <div class="hero-bottom reveal">
       <div>
-        <div class="hero-desc">
+        <div class="hero-desc" data-i18n="hero_desc">
           Building digital experiences<br>
           that live at the intersection of<br>
           <strong style="color:var(--charcoal)">code, craft &amp; creativity.</strong>
         </div>
         <div class="hero-availability" style="margin-top:1.5rem; display:inline-flex;">
           <div class="hero-dot"></div>
-          Available for freelance projects
+          <span data-i18n="hero_available">Available for freelance projects</span>
         </div>
       </div>
       <div class="hero-scroll">
         <div class="hero-scroll-line"></div>
-        <span>Scroll</span>
+        <span data-i18n="hero_scroll">Scroll</span>
       </div>
     </div>
   </section>
@@ -135,40 +141,40 @@
   <!-- ABOUT -->
   <section id="about">
     <div>
-      <div class="section-label reveal">About Me</div>
-      <h2 class="about-title reveal">
+      <div class="section-label reveal" data-i18n="about_label">About Me</div>
+      <h2 class="about-title reveal" data-i18n="about_title">
         Crafting<br>
         <em>beautiful</em><br>
         digital worlds
       </h2>
-      <p class="about-text reveal">
-        I'm Dharun Kumar N — a full-stack developer from Tamil Nadu with a obsession for clean architecture and
+      <p class="about-text reveal" data-i18n="about_text">
+        I'm Co Van An — a full-stack developer from Viet Nam with a obsession for clean architecture and
         expressive interfaces. I build things people remember, not just use. Every pixel, every API call, every database
         query is a chance to do something extraordinary.
       </p>
       <div class="about-stats reveal">
         <div class="stat-box">
           <div class="stat-num" data-count="3">0</div>
-          <div class="stat-label">Years Building</div>
+          <div class="stat-label" data-i18n="stat_years">Years Building</div>
         </div>
         <div class="stat-box">
           <div class="stat-num" data-count="40">0</div>
-          <div class="stat-label">Projects Shipped</div>
+          <div class="stat-label" data-i18n="stat_projects">Projects Shipped</div>
         </div>
         <div class="stat-box">
           <div class="stat-num" data-count="15">0</div>
-          <div class="stat-label">Happy Clients</div>
+          <div class="stat-label" data-i18n="stat_clients">Happy Clients</div>
         </div>
         <div class="stat-box">
           <div class="stat-num" data-count="8">0</div>
-          <div class="stat-label">Technologies</div>
+          <div class="stat-label" data-i18n="stat_tech">Technologies</div>
         </div>
       </div>
     </div>
 
     <div class="about-right reveal">
       <div class="skills-group">
-        <div class="skills-group-title">Frontend</div>
+        <div class="skills-group-title" data-i18n="skill_front">Frontend</div>
         <div class="skills-tags">
           <div class="skill-tag"><span>React</span></div>
           <div class="skill-tag"><span>Next.js</span></div>
@@ -179,7 +185,7 @@
         </div>
       </div>
       <div class="skills-group">
-        <div class="skills-group-title">Backend</div>
+        <div class="skills-group-title" data-i18n="skill_back">Backend</div>
         <div class="skills-tags">
           <div class="skill-tag"><span>Node.js</span></div>
           <div class="skill-tag"><span>Express</span></div>
@@ -190,7 +196,7 @@
         </div>
       </div>
       <div class="skills-group">
-        <div class="skills-group-title">Infrastructure</div>
+        <div class="skills-group-title" data-i18n="skill_infra">Infrastructure</div>
         <div class="skills-tags">
           <div class="skill-tag"><span>MongoDB</span></div>
           <div class="skill-tag"><span>PostgreSQL</span></div>
@@ -201,7 +207,7 @@
         </div>
       </div>
       <div class="skills-group">
-        <div class="skills-group-title">Tools & Design</div>
+        <div class="skills-group-title" data-i18n="skill_tools">Tools &amp; Design</div>
         <div class="skills-tags">
           <div class="skill-tag"><span>Figma</span></div>
           <div class="skill-tag"><span>Git</span></div>
@@ -217,12 +223,10 @@
   <section id="projects">
     <div class="projects-header">
       <div class="reveal">
-        <div class="section-label">Selected Work</div>
-        <div class="projects-title">Projects<br><span
-            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">&amp; Case
-            Studies</span></div>
+        <div class="section-label" data-i18n="proj_label">Selected Work</div>
+        <div class="projects-title" data-i18n="proj_title">Projects<br><span style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">&amp; Case Studies</span></div>
       </div>
-      <div class="projects-count reveal">06 Projects</div>
+      <div class="projects-count reveal" data-i18n="proj_count">06 Projects</div>
     </div>
 
     <div id="project-list">
@@ -230,15 +234,14 @@
         <div class="project-num">01</div>
         <div>
           <div class="project-name">NexCommerce</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Full-stack
-            e-commerce platform with AI recommendations</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc1">Full-stack e-commerce platform with AI recommendations</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">Next.js</span>
           <span class="tech-badge">Stripe</span>
           <span class="tech-badge">MongoDB</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -247,15 +250,14 @@
         <div class="project-num">02</div>
         <div>
           <div class="project-name">Lumina Dashboard</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Real-time
-            analytics dashboard with live WebSocket data</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc2">Real-time analytics dashboard with live WebSocket data</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">React</span>
           <span class="tech-badge">D3.js</span>
           <span class="tech-badge">WebSocket</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -264,15 +266,14 @@
         <div class="project-num">03</div>
         <div>
           <div class="project-name">PixelForge Studio</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Browser-based
-            creative suite for generative art</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc3">Browser-based creative suite for generative art</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">Canvas API</span>
           <span class="tech-badge">WebGL</span>
           <span class="tech-badge">GSAP</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -282,15 +283,14 @@
         <div class="project-num">04</div>
         <div>
           <div class="project-name">Cogni AI Chat</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Conversational AI
-            platform with multi-model routing</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc4">Conversational AI platform with multi-model routing</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">Python</span>
           <span class="tech-badge">FastAPI</span>
           <span class="tech-badge">OpenAI</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -300,15 +300,14 @@
         <div class="project-num">05</div>
         <div>
           <div class="project-name">ThreadNest</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Social platform
-            for developers with code sharing</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc5">Social platform for developers with code sharing</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">Node.js</span>
           <span class="tech-badge">Socket.io</span>
           <span class="tech-badge">Redis</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -318,15 +317,14 @@
         <div class="project-num">06</div>
         <div>
           <div class="project-name">VaultChain</div>
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Decentralized file
-            storage with blockchain verification</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;"><span data-i18n="proj_desc6">Decentralized file storage with blockchain verification</span></div>
         </div>
         <div class="project-tech">
           <span class="tech-badge">Solidity</span>
           <span class="tech-badge">IPFS</span>
           <span class="tech-badge">Web3.js</span>
         </div>
-        <a href="#" class="project-link">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <a href="#" class="project-link" data-i18n="proj_view">View <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
           </svg></a>
       </div>
@@ -337,23 +335,21 @@
   <section id="gallery">
     <div class="gallery-header">
       <div>
-        <div class="section-label reveal">Visual Gallery</div>
-        <h2 class="gallery-title reveal">Design<br><span
-            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">Works</span>
-        </h2>
+        <div class="section-label reveal" data-i18n="gal_label">Visual Gallery</div>
+        <h2 class="gallery-title reveal" data-i18n="gal_title">Design<br><span style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">Works</span></h2>
       </div>
-      <p class="gallery-desc reveal">
+      <p class="gallery-desc reveal" data-i18n="gal_desc">
         A curated collection of UI explorations, design systems, and visual experiments that push the boundaries of
         what's possible in the browser.
       </p>
     </div>
 
     <div class="gallery-filters reveal">
-      <button class="filter-btn active" data-filter="all">All Work</button>
-      <button class="filter-btn" data-filter="ui">UI Design</button>
-      <button class="filter-btn" data-filter="web">Web Dev</button>
-      <button class="filter-btn" data-filter="motion">Motion</button>
-      <button class="filter-btn" data-filter="brand">Branding</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Work</button>
+      <button class="filter-btn" data-filter="ui" data-i18n="filter_ui">UI Design</button>
+      <button class="filter-btn" data-filter="web" data-i18n="filter_web">Web Dev</button>
+      <button class="filter-btn" data-filter="motion" data-i18n="filter_motion">Motion</button>
+      <button class="filter-btn" data-filter="brand" data-i18n="filter_brand">Branding</button>
     </div>
 
     <div class="gallery-grid" id="galleryGrid">
@@ -434,45 +430,41 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label reveal">Experience &amp; Recognition</div>
+    <div class="section-label reveal" data-i18n="exp_label">Experience &amp; Recognition</div>
 
     <div class="exp-grid">
       <div class="exp-timeline reveal">
         <div class="exp-item">
           <div class="exp-year">2024 — Present</div>
-          <div class="exp-role">Senior Frontend Developer</div>
-          <div class="exp-company">Tech Startup — Remote</div>
-          <div class="exp-desc">Leading frontend architecture for a SaaS platform serving 50K+ users. Built component
-            systems, reduced bundle size by 40%.</div>
+          <div class="exp-role" data-i18n="exp_role1">Senior Frontend Developer</div>
+          <div class="exp-company" data-i18n="exp_comp1">Tech Startup — Remote</div>
+          <div class="exp-desc" data-i18n="exp_desc1">Leading frontend architecture for a SaaS platform serving 50K+ users. Built component systems, reduced bundle size by 40%.</div>
         </div>
         <div class="exp-item">
           <div class="exp-year">2023 — 2024</div>
-          <div class="exp-role">Full Stack Developer</div>
-          <div class="exp-company">Digital Agency, Chennai</div>
-          <div class="exp-desc">Developed 12+ client projects across e-commerce, fintech, and media sectors. Delivered
-            under aggressive deadlines with 100% client retention.</div>
+          <div class="exp-role" data-i18n="exp_role2">Full Stack Developer</div>
+          <div class="exp-company" data-i18n="exp_comp2">Digital Agency, Chennai</div>
+          <div class="exp-desc" data-i18n="exp_desc2">Developed 12+ client projects across e-commerce, fintech, and media sectors. Delivered under aggressive deadlines with 100% client retention.</div>
         </div>
         <div class="exp-item">
           <div class="exp-year">2022 — 2023</div>
-          <div class="exp-role">Junior Web Developer</div>
-          <div class="exp-company">Freelance</div>
-          <div class="exp-desc">Built responsive web apps for local businesses. Established client relationships that
-            led to 8 long-term contracts.</div>
+          <div class="exp-role" data-i18n="exp_role3">Junior Web Developer</div>
+          <div class="exp-company" data-i18n="exp_comp3">Freelance</div>
+          <div class="exp-desc" data-i18n="exp_desc3">Built responsive web apps for local businesses. Established client relationships that led to 8 long-term contracts.</div>
         </div>
         <div class="exp-item">
           <div class="exp-year">2021 — 2022</div>
-          <div class="exp-role">UI/UX Intern</div>
-          <div class="exp-company">Design Studio, Coimbatore</div>
-          <div class="exp-desc">Designed wireframes and prototypes in Figma. Contributed to a design system used across
-            20+ products.</div>
+          <div class="exp-role" data-i18n="exp_role4">UI/UX Intern</div>
+          <div class="exp-company" data-i18n="exp_comp4">Design Studio, Coimbatore</div>
+          <div class="exp-desc" data-i18n="exp_desc4">Designed wireframes and prototypes in Figma. Contributed to a design system used across 20+ products.</div>
         </div>
       </div>
 
       <div class="exp-right reveal">
-        <div class="exp-big-text">
+        <div class="exp-big-text" data-i18n="exp_big">
           Building things<br>that <em>matter.</em>
         </div>
-        <div class="section-label">Recognitions</div>
+        <div class="section-label" data-i18n="aw_label">Recognitions</div>
         <ul class="awards-list">
           <li class="award-item">
             <div>
@@ -511,16 +503,15 @@
   <section id="github-section">
     <div class="github-inner">
       <div class="reveal">
-        <div class="section-label" style="color:rgba(245,240,232,0.4);">Open Source</div>
-        <h2 class="github-title">Code I've<br>put into <em>the world.</em></h2>
-        <p class="github-desc">Every commit tells a story. Every repo is a conversation. I believe in building in public
-          and contributing to the ecosystem that built me.</p>
-        <a href="https://github.com" target="_blank" class="github-btn">
+        <div class="section-label" style="color:rgba(245,240,232,0.4);" data-i18n="gh_label">Open Source</div>
+        <h2 class="github-title" data-i18n="gh_title">Code I\'ve<br>put into <em>the world.</em></h2>
+        <p class="github-desc" data-i18n="gh_desc">Every commit tells a story. Every repo is a conversation. I believe in building in public and contributing to the ecosystem that built me.</p>
+        <a href="https://github.com/CoVanAn" target="_blank" class="github-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
           </svg>
-          View GitHub Profile
+          <span data-i18n="gh_btn">View GitHub Profile</span>
         </a>
       </div>
 
@@ -528,24 +519,24 @@
         <div id="github-stats">
           <div class="gh-stat">
             <div class="gh-num" id="ghRepos">—</div>
-            <div class="gh-label">Repositories</div>
+            <div class="gh-label" data-i18n="gh_repo">Repositories</div>
           </div>
           <div class="gh-stat">
             <div class="gh-num" id="ghStars">—</div>
-            <div class="gh-label">Stars Earned</div>
+            <div class="gh-label" data-i18n="gh_star">Stars Earned</div>
           </div>
           <div class="gh-stat">
             <div class="gh-num" id="ghFollowers">—</div>
-            <div class="gh-label">Followers</div>
+            <div class="gh-label" data-i18n="gh_follow">Followers</div>
           </div>
           <div class="gh-stat">
             <div class="gh-num">1.2K</div>
-            <div class="gh-label">Contributions</div>
+            <div class="gh-label" data-i18n="gh_contrib">Contributions</div>
           </div>
         </div>
 
         <div class="contribution-grid" id="contribGrid">
-          <div class="contrib-title">Contribution Activity — 2024</div>
+          <div class="contrib-title" data-i18n="gh_act">Contribution Activity — 2024</div>
           <!-- generated by JS -->
         </div>
       </div>
@@ -556,30 +547,29 @@
   <section id="contact">
     <div class="contact-inner">
       <div>
-        <div class="section-label reveal">Get In Touch</div>
-        <div class="contact-big reveal">
-          Let's<br>
+        <div class="section-label reveal" data-i18n="ct_label">Get In Touch</div>
+        <div class="contact-big reveal" data-i18n="ct_big">
+          Let\'s<br>
           <em>build</em><br>
           together.
         </div>
-        <p class="contact-sub reveal">
-          Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a good
-          conversation.
+        <p class="contact-sub reveal" data-i18n="ct_sub">
+          Whether you have a project in mind, want to collaborate, or just want to say hello — I\'m always up for a good conversation.
         </p>
         <div class="contact-links reveal">
-          <a href="mailto:dharunkumar@email.com" class="contact-link">
+          <a href="mailto:[EMAIL_ADDRESS]" class="contact-link">
             <div>
               <div class="contact-link-name">Email</div>
-              <div class="contact-link-handle">dharunkumar@email.com</div>
+              <div class="contact-link-handle">covanan632003@gmail.com</div>
             </div>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
             </svg>
           </a>
-          <a href="https://github.com" target="_blank" class="contact-link">
+          <a href="https://github.com/CoVanAn" target="_blank" class="contact-link">
             <div>
               <div class="contact-link-name">GitHub</div>
-              <div class="contact-link-handle">github.com/dharunkumarn</div>
+              <div class="contact-link-handle">https://github.com/CoVanAn</div>
             </div>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
@@ -594,10 +584,19 @@
               <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
             </svg>
           </a>
-          <a href="https://twitter.com" target="_blank" class="contact-link">
+          <a href="https://www.facebook.com/an.covan.9" target="_blank" class="contact-link">
             <div>
-              <div class="contact-link-name">Twitter / X</div>
-              <div class="contact-link-handle">@dharunkumarn</div>
+              <div class="contact-link-name">Facebook</div>
+              <div class="contact-link-handle">Văn An</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://zalo.me/0922338534" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">Zalo - Number Phone</div>
+              <div class="contact-link-handle">0922338534</div>
             </div>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
@@ -607,29 +606,29 @@
       </div>
 
       <div class="contact-form-wrap reveal">
-        <div class="section-label">Send A Message</div>
+        <div class="section-label" data-i18n="ct_form_lbl">Send A Message</div>
         <form onsubmit="handleFormSubmit(event)" style="margin-top:2rem;">
           <div class="form-row">
-            <label class="form-label" for="fname">Your Name</label>
+            <label class="form-label" for="fname" data-i18n="ct_name">Your Name</label>
             <input type="text" id="fname" class="form-input" placeholder="John Doe" required />
           </div>
           <div class="form-row">
-            <label class="form-label" for="femail">Email Address</label>
+            <label class="form-label" for="femail" data-i18n="ct_email">Email Address</label>
             <input type="email" id="femail" class="form-input" placeholder="john@example.com" required />
           </div>
           <div class="form-row">
-            <label class="form-label" for="fsubject">Subject</label>
+            <label class="form-label" for="fsubject" data-i18n="ct_subj">Subject</label>
             <input type="text" id="fsubject" class="form-input" placeholder="Project Inquiry" />
           </div>
           <div class="form-row">
-            <label class="form-label" for="fmsg">Message</label>
+            <label class="form-label" for="fmsg" data-i18n="ct_msg">Message</label>
             <textarea id="fmsg" class="form-textarea" rows="4" placeholder="Tell me about your project..."
               required></textarea>
           </div>
-          <button type="submit" class="form-submit"><span>Send Message →</span></button>
+          <button type="submit" class="form-submit" data-i18n="ct_btn"><span>Send Message →</span></button>
           <div id="form-success"
             style="display:none; font-family:var(--font-mono);font-size:12px;color:green;margin-top:1rem;letter-spacing:0.05em;">
-            ✓ Message sent! I'll get back to you soon.
+            <span data-i18n="ct_success">✓ Message sent! I\'ll get back to you soon.</span>
           </div>
         </form>
       </div>
@@ -638,11 +637,12 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-left">© 2025 Dharun Kumar N. All rights reserved.</div>
+    <div class="footer-left" data-i18n="ft_left">© 2025 Cồ Văn An. All rights reserved.</div>
     <div class="footer-logo">dk<span>.</span>dev</div>
-    <div class="footer-right">Built with <span style="color:var(--accent)">♥</span> from Space</div>
+    <div class="footer-right" data-i18n="ft_right">Built with <span style="color:var(--accent)">♥</span> from Space</div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

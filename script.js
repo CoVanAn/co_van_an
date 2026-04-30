@@ -222,3 +222,202 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ── i18n LANGUAGE TOGGLE ──────────────────────
+const translations = {
+  en: {
+    nav_about: "About",
+    nav_projects: "Projects",
+    nav_gallery: "Gallery",
+    nav_experience: "Experience",
+    nav_contact: "Contact",
+    nav_hire: "Hire Me",
+    mobile_hire: "Hire Me →",
+    hero_role1: "Full Stack Developer",
+    hero_role2: "& UX-UI Designer",
+    hero_desc: "Building digital experiences<br>that live at the intersection of<br><strong style=\"color:var(--charcoal)\">code, craft &amp; creativity.</strong>",
+    hero_available: "Available for freelance projects",
+    hero_scroll: "Scroll",
+    about_label: "About Me",
+    about_title: "Crafting<br><em>beautiful</em><br>digital worlds",
+    about_text: "I'm Co Van An — a full-stack developer from Viet Nam with a obsession for clean architecture and expressive interfaces. I build things people remember, not just use. Every pixel, every API call, every database query is a chance to do something extraordinary.",
+    stat_years: "Years Building",
+    stat_projects: "Projects Shipped",
+    stat_clients: "Happy Clients",
+    stat_tech: "Technologies",
+    skill_front: "Frontend",
+    skill_back: "Backend",
+    skill_infra: "Infrastructure",
+    skill_tools: "Tools &amp; Design",
+    proj_label: "Selected Work",
+    proj_title: "Projects<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">&amp; Case Studies</span>",
+    proj_count: "06 Projects",
+    proj_desc1: "Full-stack e-commerce platform with AI recommendations",
+    proj_desc2: "Real-time analytics dashboard with live WebSocket data",
+    proj_desc3: "Browser-based creative suite for generative art",
+    proj_desc4: "Conversational AI platform with multi-model routing",
+    proj_desc5: "Social platform for developers with code sharing",
+    proj_desc6: "Decentralized file storage with blockchain verification",
+    proj_view: "View",
+    gal_label: "Visual Gallery",
+    gal_title: "Design<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">Works</span>",
+    gal_desc: "A curated collection of UI explorations, design systems, and visual experiments that push the boundaries of what's possible in the browser.",
+    filter_all: "All Work",
+    filter_ui: "UI Design",
+    filter_web: "Web Dev",
+    filter_motion: "Motion",
+    filter_brand: "Branding",
+    exp_label: "Experience &amp; Recognition",
+    exp_role1: "Senior Frontend Developer",
+    exp_comp1: "Tech Startup — Remote",
+    exp_desc1: "Leading frontend architecture for a SaaS platform serving 50K+ users. Built component systems, reduced bundle size by 40%.",
+    exp_role2: "Full Stack Developer",
+    exp_comp2: "Digital Agency, Chennai",
+    exp_desc2: "Developed 12+ client projects across e-commerce, fintech, and media sectors. Delivered under aggressive deadlines with 100% client retention.",
+    exp_role3: "Junior Web Developer",
+    exp_comp3: "Freelance",
+    exp_desc3: "Built responsive web apps for local businesses. Established client relationships that led to 8 long-term contracts.",
+    exp_role4: "UI/UX Intern",
+    exp_comp4: "Design Studio, Coimbatore",
+    exp_desc4: "Designed wireframes and prototypes in Figma. Contributed to a design system used across 20+ products.",
+    exp_big: "Building things<br>that <em>matter.</em>",
+    aw_label: "Recognitions",
+    gh_label: "Open Source",
+    gh_title: "Code I've<br>put into <em>the world.</em>",
+    gh_desc: "Every commit tells a story. Every repo is a conversation. I believe in building in public and contributing to the ecosystem that built me.",
+    gh_btn: "View GitHub Profile",
+    gh_repo: "Repositories",
+    gh_star: "Stars Earned",
+    gh_follow: "Followers",
+    gh_contrib: "Contributions",
+    gh_act: "Contribution Activity — 2024",
+    ct_label: "Get In Touch",
+    ct_big: "Let's<br><em>build</em><br>together.",
+    ct_sub: "Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a good conversation.",
+    ct_form_lbl: "Send A Message",
+    ct_name: "Your Name",
+    ct_email: "Email Address",
+    ct_subj: "Subject",
+    ct_msg: "Message",
+    ct_btn: "<span>Send Message →</span>",
+    ct_success: "✓ Message sent! I'll get back to you soon.",
+    ft_left: "© 2025 Cồ Văn An. All rights reserved.",
+    ft_right: "Built with <span style=\"color:var(--accent)\">♥</span> from Space"
+  },
+  vi: {
+    nav_about: "Giới thiệu",
+    nav_projects: "Dự án",
+    nav_gallery: "Thư viện",
+    nav_experience: "Kinh nghiệm",
+    nav_contact: "Liên hệ",
+    nav_hire: "Thuê Tôi",
+    mobile_hire: "Thuê Tôi →",
+    hero_role1: "Lập trình viên Full Stack",
+    hero_role2: "& Thiết kế UX-UI",
+    hero_desc: "Xây dựng trải nghiệm số<br>giao thoa giữa<br><strong style=\"color:var(--charcoal)\">lập trình, nghệ thuật &amp; sáng tạo.</strong>",
+    hero_available: "Sẵn sàng nhận dự án tự do",
+    hero_scroll: "Cuộn",
+    about_label: "Về Tôi",
+    about_title: "Kiến tạo<br><em>thế giới số</em><br>tuyệt đẹp",
+    about_text: "Tôi là Cồ Văn An — một lập trình viên full-stack đến từ Việt Nam với niềm đam mê về kiến trúc sạch và giao diện biểu cảm. Tôi xây dựng những thứ mọi người nhớ đến, không chỉ sử dụng. Mỗi pixel, mỗi lệnh gọi API, mỗi truy vấn CSDL đều là cơ hội để làm nên điều phi thường.",
+    stat_years: "Năm Kinh Nghiệm",
+    stat_projects: "Dự Án Hoàn Thành",
+    stat_clients: "Khách Hàng Hài Lòng",
+    stat_tech: "Công Nghệ",
+    skill_front: "Giao diện (Frontend)",
+    skill_back: "Hệ thống (Backend)",
+    skill_infra: "Cơ sở hạ tầng",
+    skill_tools: "Công cụ &amp; Thiết kế",
+    proj_label: "Sản Phẩm Nổi Bật",
+    proj_title: "Dự án<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">&amp; Tình huống</span>",
+    proj_count: "06 Dự án",
+    proj_desc1: "Nền tảng thương mại điện tử full-stack với AI gợi ý",
+    proj_desc2: "Bảng phân tích thời gian thực với dữ liệu WebSocket trực tiếp",
+    proj_desc3: "Bộ công cụ sáng tạo nghệ thuật sinh ra trên trình duyệt",
+    proj_desc4: "Nền tảng AI hội thoại với định tuyến đa mô hình",
+    proj_desc5: "Mạng xã hội chia sẻ mã nguồn dành cho lập trình viên",
+    proj_desc6: "Lưu trữ tệp phi tập trung xác minh bằng blockchain",
+    proj_view: "Xem",
+    gal_label: "Thư viện Ảnh",
+    gal_title: "Tác phẩm<br><span style=\"font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);\">Thiết kế</span>",
+    gal_desc: "Bộ sưu tập chọn lọc các giao diện, hệ thống thiết kế và các thử nghiệm hình ảnh vượt qua giới hạn của những gì có thể trên trình duyệt.",
+    filter_all: "Tất cả",
+    filter_ui: "Thiết kế UI",
+    filter_web: "Phát triển Web",
+    filter_motion: "Chuyển động",
+    filter_brand: "Thương hiệu",
+    exp_label: "Kinh nghiệm &amp; Giải thưởng",
+    exp_role1: "Lập trình viên Frontend Cao cấp",
+    exp_comp1: "Tech Startup — Từ xa",
+    exp_desc1: "Dẫn dắt kiến trúc frontend cho nền tảng SaaS phục vụ hơn 50 nghìn người dùng. Xây dựng hệ thống component, giảm 40% dung lượng.",
+    exp_role2: "Lập trình viên Full Stack",
+    exp_comp2: "Digital Agency, Hà Nội",
+    exp_desc2: "Phát triển hơn 12 dự án khách hàng đa lĩnh vực (e-commerce, fintech, truyền thông). Hoàn thành đúng hạn với tỷ lệ giữ chân khách 100%.",
+    exp_role3: "Lập trình viên Web Tập sự",
+    exp_comp3: "Làm tự do",
+    exp_desc3: "Xây dựng ứng dụng web đáp ứng cho doanh nghiệp địa phương. Thiết lập quan hệ dẫn đến 8 hợp đồng dài hạn.",
+    exp_role4: "Thực tập sinh UI/UX",
+    exp_comp4: "Design Studio, Đà Nẵng",
+    exp_desc4: "Thiết kế wireframe và prototype trên Figma. Đóng góp vào hệ thống thiết kế được dùng trên 20+ sản phẩm.",
+    exp_big: "Kiến tạo những điều<br><em>có ý nghĩa.</em>",
+    aw_label: "Giải Thưởng",
+    gh_label: "Mã Nguồn Mở",
+    gh_title: "Mã nguồn tôi<br>đã mang đến <em>thế giới.</em>",
+    gh_desc: "Mỗi dòng lệnh là một câu chuyện. Mỗi dự án là một cuộc trò chuyện. Tôi tin vào việc xây dựng công khai và đóng góp lại cho cộng đồng.",
+    gh_btn: "Xem Hồ sơ GitHub",
+    gh_repo: "Kho lưu trữ",
+    gh_star: "Lượt thích (Stars)",
+    gh_follow: "Người theo dõi",
+    gh_contrib: "Đóng góp",
+    gh_act: "Hoạt động đóng góp — 2024",
+    ct_label: "Liên hệ",
+    ct_big: "Cùng nhau<br><em>phát triển.</em>",
+    ct_sub: "Dù bạn có ý tưởng dự án, muốn hợp tác hay chỉ đơn giản là muốn trò chuyện — tôi luôn sẵn sàng lắng nghe.",
+    ct_form_lbl: "Gửi tin nhắn",
+    ct_name: "Tên của bạn",
+    ct_email: "Địa chỉ Email",
+    ct_subj: "Chủ đề",
+    ct_msg: "Nội dung",
+    ct_btn: "<span>Gửi tin nhắn →</span>",
+    ct_success: "✓ Đã gửi tin nhắn! Tôi sẽ phản hồi sớm.",
+    ft_left: "© 2025 Cồ Văn An. Bảo lưu mọi quyền.",
+    ft_right: "Xây dựng với <span style=\"color:var(--accent)\">♥</span> từ Trái Đất"
+  }
+};
+
+let currentLang = 'en';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  
+  // Update toggle UI
+  const langEn = document.getElementById('lang-en');
+  const langVi = document.getElementById('lang-vi');
+  
+  if (langEn && langVi) {
+    langEn.classList.toggle('active', lang === 'en');
+    langVi.classList.toggle('active', lang === 'vi');
+    langEn.style.color = lang === 'en' ? 'var(--accent)' : 'var(--muted)';
+    langVi.style.color = lang === 'vi' ? 'var(--accent)' : 'var(--muted)';
+  }
+
+  // Translate all elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+}
+
+if (document.getElementById('lang-en')) {
+  document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+}
+if (document.getElementById('lang-vi')) {
+  document.getElementById('lang-vi').addEventListener('click', () => setLanguage('vi'));
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage('en');
+});
