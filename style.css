@@ -696,6 +696,26 @@
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--charcoal);
+
+    & p {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--charcoal);
+      font-weight: 500;
+      & a {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--charcoal);
+        font-weight: 500;
+      }
+  
+      & a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+
+
   }
 
   .project-tech {
