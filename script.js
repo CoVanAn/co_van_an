@@ -201,7 +201,7 @@ function generateContribGrid() {
   const weeks = 30;
   const days = 7;
   const levels = ["", "l1", "l2", "l3", "l4"];
-  let html = '<div class="contrib-title">Contribution Activity — 2024</div>';
+  let html = '<div class="contrib-title">Contribution Activity — 2025</div>';
   for (let d = 0; d < days; d++) {
     html += '<div class="contrib-row">';
     for (let w = 0; w < weeks; w++) {
@@ -272,13 +272,14 @@ const translations = {
     about_label: "About Me",
     about_title: "Crafting<br><em>beautiful</em><br>digital worlds",
     about_text:
-      "I'm Co Van An — a full-stack developer from Viet Nam with a obsession for clean architecture and expressive interfaces. I build things people remember, not just use. Every pixel, every API call, every database query is a chance to do something extraordinary.",
+      "I'm Co Van An — a full-stack developer from Viet Nam (Ba Dinh - Ha Noi) with a obsession for clean architecture and expressive interfaces. I build things people remember, not just use. Every pixel, every API call, every database query is a chance to do something extraordinary.",
     stat_years: "Years Building",
     stat_projects: "Projects Shipped",
     stat_clients: "Happy Clients",
     stat_tech: "Technologies",
     skill_front: "Frontend",
     skill_back: "Backend",
+    skill_lang: "Languages",
     skill_infra: "Infrastructure",
     skill_tools: "Tools &amp; Design",
     proj_label: "Selected Work",
@@ -316,8 +317,7 @@ const translations = {
       "Developed 12+ client projects across e-commerce, fintech, and media sectors. Delivered under aggressive deadlines with 100% client retention.",
     exp_role3: "Junior Web Developer",
     exp_comp3: "Freelance",
-    exp_desc3:
-      "Built responsive web apps for local businesses. Established client relationships that led to 8 long-term contracts.",
+    exp_desc3: "Developed UI components using React and modern JavaScript.",
     exp_role4: "UI/UX Intern",
     exp_comp4: "Design Studio, Coimbatore",
     exp_desc4:
@@ -380,6 +380,7 @@ const translations = {
 
     skill_front: "Frontend",
     skill_back: "Backend",
+    skill_lang: "Languages",
     skill_infra: "Hạ tầng",
     skill_tools: "Công cụ & Thiết kế",
 
@@ -428,7 +429,7 @@ const translations = {
     exp_role3: "Junior Web Developer",
     exp_comp3: "Freelance",
     exp_desc3:
-      "Xây dựng các ứng dụng web responsive cho doanh nghiệp nhỏ. Tạo dựng mối quan hệ khách hàng lâu dài với 8 hợp đồng dài hạn.",
+      "Xây dựng các components sử dụng React.js và JavaScript",
 
     exp_role4: "UI/UX Intern",
     exp_comp4: "Design Studio, Đà Nẵng",
